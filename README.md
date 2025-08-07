@@ -66,12 +66,11 @@ The "Spotify Tracks Analysis" project successfully explores key audio and popula
 
 - Positive correlation between energy and loudness
 - Noisy but insightful trends between popularity and acousticness
+- A shift in song durations across years
 
 These insights reflect evolving listener preferences and production trends in the music industry.
 
 ---
-
-
 
 
 
