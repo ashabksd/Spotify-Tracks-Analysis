@@ -1,56 +1,77 @@
-# 🎧 Spotify Tracks Analysis
+# 🎧 Spotify Tracks Exploratory Data Analysis
 
-Uncovering the patterns behind the music — an exploratory data analysis of 2000+ Spotify tracks to understand what makes a song popular, energetic, and loud.
-
----
-
-## 📌 Overview
-
-This project dives into a dataset of Spotify tracks to explore:
-
-- 🎵 What characteristics define popular music?
-- 🔊 Is loudness linked to energy?
-- ⏱️ Are longer songs more popular?
-- 📈 Which audio features tend to cluster together?
-
-Using **Python**, **Pandas**, **Seaborn**, and **Matplotlib**, I analyze and visualize key insights from Spotify audio features such as energy, tempo, loudness, and popularity.
+An in-depth exploratory data analysis (EDA) of over 2,000 Spotify tracks to uncover trends, correlations, and insights from the world of digital music.
 
 ---
 
-## 🚀 Highlights
+## 📌 Introduction
 
-- 🔍 **Exploratory Data Analysis (EDA)** on over 2,000 Spotify tracks  
-- 📊 Correlation heatmaps, scatter plots, and trend lines  
-- 📈 Regression analysis on features like `energy vs loudness`  
-- 🧹 Cleaned and transformed real-world music data  
-- 🧠 Key insights explained with visual storytelling  
+The "Spotify Tracks Analysis" project explores and visualizes a dataset containing metadata and audio features for various Spotify songs. The main goal is to gain insights into song characteristics, identify patterns, and understand correlations using Python and libraries like Pandas, NumPy, Matplotlib, and Seaborn.
 
 ---
 
-## 🖼️ Sample Visualization
+## 🧼 Data Loading and Cleaning
 
-> **Loudness vs Energy Correlation**  
-> Songs that are more energetic are typically louder — a trend that reflects how music is produced for high impact.
+- The dataset is loaded using `pandas` from a CSV file.
+- Columns include: `id`, `name`, `popularity`, `duration_ms`, `artists`, `release_date`, and various audio features like `energy`, `loudness`, `acousticness`, etc.
+- Initial checks for missing values using `isnull()` and `.info()`
+
+---
+
+## 🔍 Exploratory Data Analysis
+
+### 🎵 1. 10 Least Popular Songs
+Tracks are sorted in ascending order by popularity to reveal the least popular songs in the dataset.
+
+### 🌟 2. 10 Popular Songs with Popularity > 90
+Highlights the most popular songs with a popularity score greater than 90.
+
+---
+
+## 🔄 Data Transformation
+
+- The duration of songs (initially in milliseconds) is converted to **seconds**.
+- `duration_ms` is dropped.
+- New column `duration` is added for clarity.
+
+---
+
+## 📊 Visualizations
+
+### 🔥 Correlation Heatmap
+
+Shows how audio features relate to one another (after removing non-numeric or categorical features like `key`, `mode`, and `explicit`).
+
+![Correlation Heatmap](images/correlation_heatmap.png)
+
+---
+
+### 🎚️ Regression Plots
+
+#### 1. Loudness vs Energy
+Visualizes how louder songs tend to be more energetic.
 
 ![Loudness vs Energy](images/loudness_vs_energy.png)
 
----
+#### 2. Popularity vs Acousticness
+Reveals whether acoustic songs are more or less popular.
 
-## 🛠️ Tech Stack
-
-- **Python 3**
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- Jupyter Notebook
+![Popularity vs Acousticness](images/popularity_vs_acousticness.png)
 
 ---
 
-## 📥 How to Run It
+## ✅ Conclusion
 
-1. Clone this repository
-2. Install dependencies  
-   ```bash
-   pip install -r requirements.txt
+The "Spotify Tracks Analysis" project successfully explores key audio and popularity features of Spotify songs. Using EDA and data visualization, we uncovered:
+
+- Positive correlation between energy and loudness
+- Noisy but insightful trends between popularity and acousticness
+
+These insights reflect evolving listener preferences and production trends in the music industry.
+
+---
+
+
+
+
 
